@@ -1,0 +1,128 @@
+1.
+8
+33
+
+2.
+0
+
+3.
+infinitely
+
+4.
+21
+
+5.
+System.out.printf("%c", name.charAt(name.length() - 1);
+
+6.
+int index = s.indexOf('?');
+if (index != -1) {
+	System.out.printf("Found '?' at index=%d%n", index);
+}
+
+7.
+int index = 0;
+int[] values = new int[1000/3];
+for (int num = 1; num <= 1000; ++num) {
+	if ((num % 3) == 0) {
+		values[index] = num;
+		++index;
+	}
+}
+
+8.
+public static double[] powers(double numbers[], double exponents[]) {
+	double[] results = new double[numbers.length];
+	for (int index = 0; index < numbers.length; ++index) {
+		results[index] = Math.pow(numbers[index], exponents[index]);
+	}
+
+	return results;
+}
+
+9.
+new double[2];
+width, height, results
+boolean 
+double width, double height, double[] results
+if (width < 0.0 || height < 0.0) {
+	return false;
+}
+
+results[0] = width * height;
+results[1] = 2 * (width + height);
+
+return true;
+
+10.
+a. 13
+b. 8
+c. Error (out of bounds: array index starts from 0 to 7)
+d. Error (out of bounds: array index starts from 0 to 7)
+
+11.
+digits = new char[10];
+for (int index = 0; index < 10; ++index) {
+	digits[index] = String.format("%d", index).charAt(0);
+}
+
+Arrays.toString
+
+12.
+char digit = String.format("%d", number).charAt(0);
+int count = 0;
+for (int index = 0; index < str.length(); ++index) {
+	if (digit == str.charAt(index)) {
+		++count;
+	}
+}
+
+return count;
+
+13.
+int[] randoms = new int[1000];
+Random rand = new Random();
+
+for (int index = 0; index < 1000; ++index) {
+	randoms[index] = rand.nextInt(high - low) + low;
+}
+
+14.
+Scanner scanner = new Scanner(new FileReader("numbers.txt"));
+int count = 0;
+double totalSum = 0.0;
+while (scanner.hasNext()) {
+	++count;
+	totalSum += scanner.nextDouble();
+}
+
+System.out.printf("Total=%f, Average=%f%n", totalSum, totalSum / count);
+
+15.
+for (int start = 0, end = numbers.length - 1; start < end; ++start, --end) {
+	int tmp = numbers[start];
+	numbers[start] = numbers[end];
+	numbers[end] = tmp;
+}
+
+16.
+ArrayList<Integer> oddNumbers = new ArrayList<>(100);
+for (int count = 0; oddNumbers.size() < 100; ++count) {
+	if ((count % 2) != 0) {
+		oddNumbers.add(count);
+	}
+}
+
+for (int index = 0; index < 10; ++index) {
+	System.out.println(oddNumbers.get(index));
+}
+
+for (int count = 0; count < 20; ++count) {
+	oddNumbers.remove(oddNumbers.size() - 1);
+}
+
+17.
+char[] alphas = new char[26];
+for (int count = 0; count < 26; ++count) {
+	alphas[count] = (char)('A' + count);
+}
