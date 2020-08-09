@@ -35,15 +35,12 @@ final public class Ellipse_37491 {
 
         // Since sentinel is compared against user input inside loop, we perform check against SENTINEL
         // inside the loop
-        while (true) {
-            System.out.printf("%nEnter the major radius value or enter -1 to exit: ");
-            double majorRadius = scanner.nextDouble();
+        double majorRadius;
 
-            // Check input against sentinel and break loop accordingly
-            if (SENTINEL == (int) majorRadius) {
-                break;
-            }
+        // Duplicate: Show message for the first time before entering the loop
+        System.out.printf("%nEnter the major radius value or enter -1 to exit: ");
 
+        while (SENTINEL != (majorRadius = scanner.nextDouble())) {
             System.out.print("Enter the minor radius value: ");
             double minorRadius = scanner.nextDouble();
 
@@ -60,6 +57,9 @@ final public class Ellipse_37491 {
                             "The ellipse area is %.2f%n" +
                             "The ellipse circumference is %.2f%n", ellipse.getEllipseFocus(), ellipse.getEllipseArea(), ellipse.getEllipseCircumference());
             }
+
+            // Duplicate: Display the prompt since we read the input in 'while' condition
+            System.out.printf("%nEnter the major radius value or enter -1 to exit: ");
         }
 
         scanner.close();
